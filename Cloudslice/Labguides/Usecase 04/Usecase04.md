@@ -75,7 +75,7 @@ Fabric professional and citizen developer experiences.
 ### Task 1: Create a workspace
 
 1.  Open your browser, navigate to the address bar, and type or paste
-    the following URL: +++https://app.fabric.microsoft.com/+++ then
+    the following URL: !!https://app.fabric.microsoft.com/!! then
     press the **Enter** button.
 
 \[!note\]**Note**: If you are directed to Microsoft Fabric Home page,
@@ -88,8 +88,8 @@ then skip to step \#5.
 
 | Credential | Value |
 |---|---|
-| Username | +++@lab.CloudPortalCredential(User1).Username+++ |
-| Password | +++@lab.CloudPortalCredential(User1).Password+++ |
+| Username | !!@lab.CloudPortalCredential(User1).Username!! |
+| Password | !!@lab.CloudPortalCredential(User1).Password!! |
 
 > ![](./media/image2.png)
 
@@ -145,7 +145,7 @@ then skip to step \#5.
 generated](./media/image11.png)
 
 2.  On the **New warehouse** dialog,
-    enter +++**WideWorldImporters+++** and click on
+    enter !!**WideWorldImporters!!** and click on
     the **Create** button.
 
 ![](./media/image12.png)
@@ -171,7 +171,7 @@ generated](./media/image11.png)
 
 ![](./media/image15.png)
 
-3.  In the **New copy job** window, in the **Name** box, enter +++**Load Customer Data**+++. Select **Create**
+3.  In the **New copy job** window, in the **Name** box, enter !!**Load Customer Data**!!. Select **Create**
 
 > ![](./media/image16.png)
 
@@ -280,7 +280,7 @@ generated](./media/image11.png)
     The CURRENT_TIMESTAMP T-SQL function returns the current UTC
     timestamp as a **datetime**. Select **Run** to execute the query.
 
- +++SELECT CURRENT_TIMESTAMP;+++
+ !!SELECT CURRENT_TIMESTAMP;!!
 
 ![](./media/image32.png)
 
@@ -300,7 +300,7 @@ CREATE TABLE [dbo].[fact_sale2] AS CLONE OF [dbo].[fact_sale] AT '2025-01-01T10:
 
 ![](./media/image34.png)
 
-7.  Rename the query as **+++Clone Tables+++**.
+7.  Rename the query as **!!Clone Tables!!**.
 
 > ![](./media/image35.png)
 >
@@ -359,7 +359,7 @@ CREATE TABLE [dbo1].[fact_sale2] AS CLONE OF [dbo].[fact_sale] AT '2025-01-01T10
 
 > ![](./media/image41.png)
 
-6.  Rename the query as +++**Clone Tables Across Schemas**+++.
+6.  Rename the query as !!**Clone Tables Across Schemas**!!.
 
 > ![](./media/image42.png)
 >
@@ -440,7 +440,7 @@ in a warehouse table.
 
 > ![](./media/image46.png)
 
-4.  When execution completes, rename the query as +++**Create Aggregate Procedure**+++.
+4.  When execution completes, rename the query as !!**Create Aggregate Procedure**!!.
 
 > ![A screenshot of a computer Description automatically
 > generated](./media/image47.png)
@@ -473,7 +473,7 @@ data in a warehouse table.
 
 ![](./media/image51.png)
 
-3.  When execution completes, rename the query as +++**Run Aggregate Procedure+++**.
+3.  When execution completes, rename the query as !!**Run Aggregate Procedure!!**.
 
 > ![](./media/image52.png)
 >
@@ -523,8 +523,8 @@ ORDER BY
 ```
  ![](./media/image56.png)
 
-3.  When execution completes, rename the query as +++**Create Top 10
-    Customer View**+++.
+3.  When execution completes, rename the query as !!**Create Top 10
+    Customer View**!!.
 
 ![](./media/image57.png)
 
@@ -565,7 +565,7 @@ ORDER BY
 **Note:** Currently, you can only use the Coordinated Universal Time
 (UTC) time zone for time travel.
 
-7.  When execution completes, rename the query as +++**Time Travel+++**.
+7.  When execution completes, rename the query as !!**Time Travel!!**.
 
 ![](./media/image63.png)
 
@@ -596,7 +596,7 @@ ORDER BY
 
 ![](./media/image65.png)
 
-12. Rename the query as +++**Time Travel Now+++**
+12. Rename the query as !!**Time Travel Now!!**
 
 > ![](./media/image66.png)
 >
@@ -636,7 +636,7 @@ In this task, learn how to create a query with the visual query builder.
 
 ![](./media/image71.png)
 
-4.  In the **Keep top rows** dialog box, enter +++**10000+++** and
+4.  In the **Keep top rows** dialog box, enter !!**10000!!** and
     Select **OK**.
 
 ![](./media/image72.png)
@@ -733,7 +733,7 @@ In this task, learn how to create a query with the visual query builder.
 
 ![](./media/image85.png)
 
-12. Type +++**Sales Summary+++** to change the name of the query.
+12. Type !!**Sales Summary!!** to change the name of the query.
     Press **Enter** on the keyboard or select anywhere outside the tab
     to save the change.
 
@@ -793,7 +793,7 @@ with a notebook.
 > ![](./media/image93.png)
 
 4.  When provisioning is complete, the lakehouse
-    enter +++**Shortcut_Exercise**+++ as the lakehouse name and unselect
+    enter !!**Shortcut_Exercise**!! as the lakehouse name and unselect
     the lakehouses schemas. Select **Create**. ![](./media/image94.png)
 
 > ![](./media/image95.png)
@@ -935,7 +935,7 @@ GROUP BY
 ![](./media/image116.png)
 
 4.  In the **Rename** dialog box, under the **Name** field, enter
-    +++**Cross-warehouse query+++**, then click on
+    !!**Cross-warehouse query!!**, then click on
     the **Rename** button. 
 
 > ![](./media/image117.png)
@@ -953,7 +953,7 @@ Wide World Importers warehouse.
 ![](./media/image118.png)
 
 2.  In the **New semantic model** window, in the **Direct Lake semantic
-    model name** box, enter +++**Sales Model+++**
+    model name** box, enter !!**Sales Model!!**
 
 3.  Expand the dbo schema, expand the **Tables** folder, and then check
     the **dimension_city** and **fact_sale** tables. Select **Confirm**.
@@ -1083,7 +1083,7 @@ incorrect.](./media/image137.png)
 incorrect.](./media/image138.png)
 
 10. In the Save your report window, in the Enter a name for your report
-    box, enter +++**Sales Analysis**+++ and Select **Save**
+    box, enter !!**Sales Analysis**!! and Select **Save**
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image139.png)
