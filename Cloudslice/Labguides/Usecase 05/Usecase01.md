@@ -1,4 +1,4 @@
-## Use Case 03 - From Semantics to Insights: Leveraging Fabric IQ Ontology with Fabric Data Agents
+## Usecase 03 - From Semantics to Insights: Leveraging Fabric IQ Ontology with Fabric Data Agents
 
 **Introduction**
 
