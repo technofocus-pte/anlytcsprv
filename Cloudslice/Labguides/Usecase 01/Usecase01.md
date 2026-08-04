@@ -79,7 +79,7 @@ solution.
 ### Task 1: Sign in to Power BI account
 
 1.  Open your browser, navigate to the address bar, and type or paste
-    the following URL:+++https://app.fabric.microsoft.com/+++ then press
+    the following URL:!!https://app.fabric.microsoft.com/!! then press
     the **Enter** button.
 
 ![](./media/image1.png)
@@ -87,7 +87,10 @@ solution.
 2.  In the **Microsoft Fabric** window, enter your credentials, and
     click on the **Submit** button.
 
-[TABLE]
+| Credential | Value |
+|---|---|
+| Username | +++@lab.CloudPortalCredential(User1).Username+++ |
+| Password | +++@lab.CloudPortalCredential(User1).Password+++ |
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image2.png)
@@ -125,7 +128,11 @@ reports.
 2.  In the **Create a workspace** pane that appears on the right side,
     enter the following details, and click on the **Apply** button.
 
-[TABLE]
+| Property | Value |
+|---|---|
+| Name | !!Fabric Dataengineering-DataFactoryXXXXXX!! |
+| Advanced | Under License mode, select Fabric |
+| Default storage format | Small dataset storage format |
 
 ![](./media/image8.png)
 
@@ -155,7 +162,7 @@ generated](./media/image9.png)
 
 ![](./media/image14.png)
 
-3.  In the **New lakehouse** dialog box, enter +++**wwilakehouse+++** in
+3.  In the **New lakehouse** dialog box, enter **!!wwilakehouse!!** in
     the **Name** field and **unselect** the lakehouses schemas. Click on
     the **Create** button and open the new lakehouse.
 
@@ -239,12 +246,11 @@ incorrect.](./media/image19.png)
     can rename or delete these files based on your need. Paste the code
     as shown in the below image, then click on the play icon
     to **Run** the script:
-
-> SELECT BuyingGroup, Count(\*) AS Total
->
-> FROM dimension_customer
->
-> GROUP BY BuyingGroup
+```
+SELECT BuyingGroup, Count(*) AS Total
+FROM dimension_customer
+GROUP BY BuyingGroup
+```
 
 ![](./media/image30.png)
 
@@ -263,7 +269,7 @@ unnecessary spaces.
 > ![](./media/image31.png)
 
 16. In the **New semantic model** dialog enter
-    +++**wwwsemanticmodel**+++ and then select
+    !!**wwwsemanticmodel**!! and then select
     the **dimension_customer** table from the list of tables and
     select **Confirm** to create the new model.
 
@@ -301,7 +307,7 @@ unnecessary spaces.
 ![](./media/image38.png)
 
 7.  In the **Save your report** dialog box, enter a name for your report
-    as +++dimension_customer-report+++ and select **Save.**
+    as !!dimension_customer-report!! and select **Save.**
 
 ![](./media/image39.png)
 
@@ -328,7 +334,7 @@ the Wide World Importers (WWI) into the lakehouse.
 ![](./media/image42.png)
 
 3.  In the New pipeline dialog box, specify the name
-    as **+++IngestDataFromSourceToLakehouse+++** and
+    as **!!IngestDataFromSourceToLakehouse!!** and
     select **Create.** A new data factory pipeline is created and
     opened.
 
@@ -349,7 +355,7 @@ the Wide World Importers (WWI) into the lakehouse.
 
 ![](./media/image46.png)
 
-6.  On the **General** tab, enter +++**Data Copy to Lakehouse+++** in
+6.  On the **General** tab, enter !!**Data Copy to Lakehouse!!** in
     the **Name** field. Leave the other fields with their default
     values.
 
@@ -371,7 +377,12 @@ the Wide World Importers (WWI) into the lakehouse.
     container of Azure blob storage. You connect to this container to
     copy data from it.
 
-[TABLE]
+| Property | Value |
+|---|---|
+| Account name or URL | !!https://fabrictutorialdata.blob.core.windows.net/sampledata/!! |
+| Connection | Create new connection |
+| Connection name | !!wwisampledata!! |
+| Authentication kind | Anonymous |
 
 ![](./media/image50.png)
 
@@ -379,13 +390,24 @@ the Wide World Importers (WWI) into the lakehouse.
     default. Specify the following properties before moving to the
     destination settings.
 
-[TABLE]
+| Property | Value |
+|---|---|
+| Connection | wwisampledata |
+| File path type | File path |
+| File path | Container name (first text box): !!sampledata!!<br>Directory name (second text box): !!WideWorldImportersDW/parquet!! |
+| Recursively | Checked |
+| File format | Binary |
 
 ![](./media/image51.png)
 
 11. On the **Destination** tab, specify the following properties:
 
-[TABLE]
+| Property | Value |
+|---|---|
+| Connection | wwilakehouse (choose your lakehouse if you named it differently) |
+| Root folder | Files |
+| File path | Directory name (first text box): !!wwi-raw-data!! |
+| File format | Binary |
 
 ![](./media/image52.png)
 
@@ -417,7 +439,8 @@ the Wide World Importers (WWI) into the lakehouse.
 
 17. Refresh the **Files** section to see the ingested data. A new
     folder **wwi-raw-data** appears in the files section, and data from
-    Azure Blob tables is copied there. ![](./media/image59.png)
+    Azure Blob tables is copied there.
+    ![](./media/image59.png)
 
 ## Exercise 3: Prepare and transform data in the lakehouse
 
@@ -487,13 +510,11 @@ the Wide World Importers (WWI) into the lakehouse.
     compression. [Optimize
     write](https://learn.microsoft.com/en-us/fabric/data-engineering/tune-file-size#optimize-write) reduces
     the number of files written and increases individual file size.
-
-> spark.conf.set("spark.sql.parquet.vorder.enabled", "true")
->
-> spark.conf.set("spark.microsoft.delta.optimizeWrite.enabled", "true")
->
-> spark.conf.set("spark.microsoft.delta.optimizeWrite.binSize",
-> "1073741824")
+```
+spark.conf.set("spark.sql.parquet.vorder.enabled", "true")
+spark.conf.set("spark.microsoft.delta.optimizeWrite.enabled", "true")
+spark.conf.set("spark.microsoft.delta.optimizeWrite.binSize", "1073741824")
+```
 
 2.  **Run** this cell, and wait for it to finish before moving on to the
     next step.
@@ -589,7 +610,7 @@ previous section.
 
 ![](./media/image81.png)
 
-3.  In the Name field, enter +++**wwi_fact_sale_transform**+++, and then
+3.  In the Name field, enter !!**wwi_fact_sale_transform**!!, and then
     select **Create.**
 
 ![](./media/image82.png)
@@ -599,7 +620,7 @@ previous section.
 
 ![](./media/image83.png)
 
-5.  In the Choose data source tab, search for +++**Lakehouse**+++ and
+5.  In the Choose data source tab, search for !!**Lakehouse**!! and
     click on the **Lakehouse** connector.
 
 ![](./media/image84.png)
@@ -665,7 +686,7 @@ data with city and sales territory information.
 
 ![](./media/image95.png)
 
-2.  In the Choose data source tab, search for +++Lakehouse+++ and click
+2.  In the Choose data source tab, search for !!Lakehouse!! and click
     on the Lakehouse connector.
 
 ![](./media/image96.png)
@@ -761,7 +782,11 @@ profit margin column.
 6.  In the Custom column dialog, configure the new column as
     follows**:**
 
-[TABLE]
+| Property | Value |
+|---|---|
+| New column name | !!ProfitMargin!! |
+| Data type | Currency |
+| Custom column formula | !!if [TotalIncludingTax] > 0 then [Profit] / [TotalIncludingTax] else 0!! |
 
 Then select **OK**.
 
@@ -790,11 +815,11 @@ Then select **OK**.
 ![](./media/image118.png)
 
 10. Finally, expand the Query settings pane from the right side of the
-    editor and rename the query from Merge to +++Output+++.
+    editor and rename the query from Merge to !!Output!!.
 
 ![](./media/image119.png)
 
-[TABLE]
+Note: ProfitMargin = Profit / TotalIncludingTax. A value of 0.35 means 35% profit margin on that sale. Rounded to 4 decimal places for reporting precision.
 
 ### Task 6: Load the Output Query to a Gold Table in the Lakehouse
 
@@ -815,7 +840,7 @@ With the Output query fully prepared, define the output destination.
 
 4.  Under Choose destination target, select New table, browse to
     **wwilakehouse** under the **Fabric Dataengineering-DataFactory-XX**
-    workspace, enter +++**Gold_Sales_By_City+++** as the table name, and
+    workspace, enter !!**Gold_Sales_By_City!!** as the table name, and
     then click **Next**.
 
 ![](./media/image122.png)
@@ -912,7 +937,7 @@ With the Output query fully prepared, define the output destination.
 **The Pipeline expression builder dialog appears. Enter the following
 expression, then select OK:**
 
-[TABLE]
+!!@concat('WWI Data Pipeline Succeeded with Pipeline Run Id: ', pipeline().RunId)!!
 
 ![](./media/image139.png)
 
@@ -920,14 +945,14 @@ expression, then select OK:**
     expression builder option when it appears below the text area. Add
     the following expression in the Pipeline expression builder dialog
     that appears, then select OK:
-
-[TABLE]
-
+```
+@concat('RunID = ', pipeline().RunId, ' ; ', 'Files Written: ', activity('Data Copy to Lakehouse').output.filesWritten, ' ; ', 'Throughput: ', activity('Data Copy to Lakehouse').output.throughput)
+```
 ![](./media/image140.png)
 
 ![](./media/image141.png)
 
-[TABLE]
+Note: Replace Copy data1 with the actual name of your pipeline copy activity if it was renamed.
 
 2.  Finally select the Home tab at the top of the pipeline editor, and
     choose **Run**. Then select Save and run again on the confirmation
@@ -958,7 +983,12 @@ it to execute automatically.
 2.  Configure the schedule as required. The example below schedules the
     pipeline to execute daily at 8:00 PM until the end of the year.
 
-[TABLE]
+| Property | Value |
+|---|---|
+| Repeat | Daily |
+| Time | 8:00 PM |
+| End date | December 31 of the current year |
+| Time zone | Select your local time zone |
 
 ![](./media/image148.png)
 
