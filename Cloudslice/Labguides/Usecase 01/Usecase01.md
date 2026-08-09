@@ -89,8 +89,8 @@ solution.
 
 | Credential | Value |
 |---|---|
-| Username | +++@lab.CloudPortalCredential(User1).Username+++ |
-| Password | +++@lab.CloudPortalCredential(User1).Password+++ |
+| Username | !!@lab.CloudPortalCredential(User1).Username!! |
+| Password | !!@lab.CloudPortalCredential(User1).Password!! |
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image2.png)
