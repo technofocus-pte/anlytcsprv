@@ -50,13 +50,13 @@ dataflows, Data Factory pipelines, the notebooks, Power BI datasets, and
 reports.
 
 1.  Open your browser, navigate to the address bar, and type or paste
-    the following URL: +++https://app.fabric.microsoft.com/+++
+    the following URL: !!https://app.fabric.microsoft.com/!!
     then press the **Enter** button and sign in with your credentials
 
 | Credential | Value |
 |------------|-------|
-| Username | +++@lab.CloudPortalCredential(User1).Username+++ |
-| Password | +++@lab.CloudPortalCredential(User1).Password+++ |
+| Username | !!@lab.CloudPortalCredential(User1).Username!! |
+| Password | !!@lab.CloudPortalCredential(User1).Password!! |
 2. In the portal, switch to Fabric Mode before proceeding to create workspace.
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/imga1.png)
@@ -70,7 +70,7 @@ reports.
 
 | Setting | Value |
 |----------|----------|
-| Name | +++Fabric IQ OntologyXXXX+++ **(XXXX can be a unique number)** |
+| Name | !!Fabric IQ OntologyXXXX!! **(XXXX can be a unique number)** |
 | Advanced | Under **License mode**, select **Fabric capacity** |
 | Default storage format | **Small dataset storage format** |
 
@@ -90,12 +90,12 @@ reports.
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image5.png)
 
-2.  Filter by, and select, the **+++Lakehouse+++** tile.
+2.  Filter by, and select, the **!!Lakehouse!!** tile.
 
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image6.png)
 
-3.  In the **New lakehouse** dialog box, enter **+++IQ_Lakehouse+++** in the **Name** field and **unselect** the lakehouses schemas.
+3.  In the **New lakehouse** dialog box, enter **!!IQ_Lakehouse!!** in the **Name** field and **unselect** the lakehouses schemas.
     Click on the **Create** button and open the new lakehouse.
 
 > ![A screenshot of a computer AI-generated content may be
@@ -208,7 +208,7 @@ database in Eventhouse.
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image29.png)
 
-2.  Name the Eventhouse +++**TelemetryDataEH**+++ and click on
+2.  Name the Eventhouse !!**TelemetryDataEH**!! and click on
     the **Create** button.
 
 > ![A screenshot of a computer AI-generated content may be
@@ -232,7 +232,7 @@ database in Eventhouse.
     may be incorrect.](./media/image34.png)
 
 6.  Select the target option to ingest data into a new table, click +
-    New table, and enter a table name as +++**FreezerTelemetry**+++.
+    New table, and enter a table name as !!**FreezerTelemetry**!!.
 
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image35.png)
@@ -288,7 +288,7 @@ database in Eventhouse.
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image44.png)
 
-2.  Enter +++**RetailSalesOntology+++** for the **Name** of your
+2.  Enter !!**RetailSalesOntology!!** for the **Name** of your
     ontology and select **Create**.
 
 > ![A screenshot of a computer AI-generated content may be
@@ -321,7 +321,7 @@ database in Eventhouse.
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image47.png)
 
-2.  Enter +++**Store+++ **for the name of your entity type and
+2.  Enter !!**Store!! **for the name of your entity type and
     select **Add Entity Type**.
 
 > ![A screenshot of a computer AI-generated content may be
@@ -412,8 +412,8 @@ database in Eventhouse.
 
 | Entity Type Name | Source Table in IQ_Lakehouse | Entity Type Key |
 |------------------|------------------------------|-----------------|
-| +++Products+++<br><br>**Note:** Use the plural form **Products** to avoid conflict with the GQL reserved word **PRODUCT**. | **dimproducts** | **ProductId** |
-| +++SaleEvent+++ | **factsales** | **SaleId** |
+| !!Products!!<br><br>**Note:** Use the plural form **Products** to avoid conflict with the GQL reserved word **PRODUCT**. | **dimproducts** | **ProductId** |
+| !!SaleEvent!! | **factsales** | **SaleId** |
 
 ![](./media/image62.png)
 
@@ -488,7 +488,7 @@ contextual connections in your data.
 3.  Enter the following relationship type details and select **Add
     relationship type**.
 
-- **Relationship type name**: +++from+++
+- **Relationship type name**: !!from!!
 
 - **Source entity type**: **SaleEvent**
 
@@ -609,7 +609,7 @@ Follow these steps to create the *Freezer* entity type and add
 properties to it. The properties aren't bound to data yet.
 
 1.  Select **Add entity type** from the top ribbon.
-    Enter +++**Freezer*+++*** for the name of your entity type and
+    Enter !!**Freezer*!!*** for the name of your entity type and
     select **Add Entity Type**.
 
 > ![](./media/image105.png)
@@ -979,7 +979,7 @@ revenue greater than 150.*
 incorrect.](./media/imga3.png)
 
 10. From the query builder ribbon, select **Add filter \> SaleEvent \>
-    RevenueUSD**. Set the filter for +++**RevenueUSD \> 150+++.**
+    RevenueUSD**. Set the filter for !!**RevenueUSD \> 150!!.**
 
 ![](./media/image159.png)
 
@@ -1016,13 +1016,13 @@ ontology (preview) item.
 ![](./media/image163.png)
 
 2.  In the **Fabric** home page, select **+New item.** In the Filter by
-    item type search box, enter +++**data agent**+++ and select the Data
+    item type search box, enter !!**data agent**!! and select the Data
     agent
 
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image164.png)
 
-3.  Enter **+++RetailOntologyAgent+++** as the Data agent name and
+3.  Enter **!!RetailOntologyAgent!!** as the Data agent name and
     select **Create**.
 
 > ![A screenshot of a computer AI-generated content may be
@@ -1053,8 +1053,8 @@ aggregation in queries.
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image169.png)
 
-2.  At the bottom of the input box, add +++**Support group by in
-    GQL**+++. This instruction enables better aggregation across
+2.  At the bottom of the input box, add !!**Support group by in
+    GQL**!!. This instruction enables better aggregation across
     ontology data.
 
 > ![A screenshot of a computer AI-generated content may be
@@ -1073,8 +1073,8 @@ aggregation in queries.
 1.  Enter the following text and click on the **Submit icon** as shown
     in the below image.
 
-> **+++For each store, show any freezers operated by that store that
-> ever had a humidity lower than 46 percent.+++**
+> **!!For each store, show any freezers operated by that store that
+> ever had a humidity lower than 46 percent.!!**
 >
 > ![A screenshot of a computer AI-generated content may be
 > incorrect.](./media/image172.png)
@@ -1085,7 +1085,7 @@ incorrect.](./media/image173.png)
 2.  Enter the following text and click on the **Submit icon** as shown
     in the below image.
 
-> **+++What is the top product by revenue across all stores?+++**
+> **!!What is the top product by revenue across all stores?!!**
 
 ![A screenshot of a chat AI-generated content may be
 incorrect.](./media/image174.png)
